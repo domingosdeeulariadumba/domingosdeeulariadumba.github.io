@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Domingos de Eulária Dumba</title>
+  <meta name="description" content="Domingos de Eulária Dumba — Data Scientist. Projects, contact, and links." />
+  <link rel="icon" href="./assets/icons/favicon.ico" />
+  <link rel="stylesheet" href="./styles/style.css" />
+  <meta property="og:title" content="Domingos de Eulária Dumba" />
+  <meta property="og:description" content="Data Scientist — portfolio and contact." />
+  <meta property="og:image" content="./assets/images/avatar.png" />
+</head>
+
+  <body>
+    <!--Header start-->
+    <header class="header noselect">
+      <div class="header-measure">
+        <a class="header-navbar">
+          <ul class="nav">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">🏠︎ Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">☕︎ Projects</a>
+            </li>
+          </ul>
+        </a>
+      </div>
+    </header>
+    <!--end of Header-->
+
+    <!--Profile start-->
+    <div class="profile">
+      <img id="avatar" src="./assets/images/avatar.png" />
+      <p class="text-center">
+        <a href="https://github.com/domingosdeeulariadumba">
+          <img 
+          src="https://readme-typing-svg.vercel.app?font=Open+Sans&size=16&duration=2400&pause=100&color=333333&center=true&vCenter=true&width=500&lines=Hello!+%F0%9F%91%8B%F0%9F%8F%BF;I'm+Domingos+|+Data+Scientist" 
+          alt=""
+          />
+        </a>
+      </p>
+      <!--Contacts start-->
+      <div id="social-links"></div>
+      <script>
+        height = 20;
+        document.getElementById("social-links").innerHTML = `
+          <b style='margin:50px;margin-bottom:6px; display:inline-block;'></b><br>
+          <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank' style='text-decoration:none;'>
+            <img src='./assets/icons/contacts/email.png' alt="Domingos' GitHub" height='${height}' width='${height}'/>
+          </a>
+          <a href='https://github.com/domingosdeeulariadumba' target='_blank' style='text-decoration:none;'>
+            <img src='./assets/icons/contacts/github.png' alt="Domingos' GitHub" height='${height}' width='${height}'/>
+          </a>
+          <a href='https://linkedin.com/in/domingosdeeulariadumba/' target='_blank' style='text-decoration:none;'>
+            <img src='./assets/icons/contacts/linkedin.png' alt="Domingos' LinkedIn" height='${height}' width='${height}'/><br>
+          </a>
+        `;
+      </script>
+      <!--end of Contacts-->
+    </div>
+    <!--end of Profile-->
+
+    <!--Footer start-->
+    <footer></footer>
+    <script>
+    document.querySelector('footer').innerHTML =
+     `© ${new Date().getFullYear()} <strong>Domingos de Eulária Dumba</strong>.`
+     </script>
+    <!--end of Footer-->
+
+    <!-- 100% privacy-first analytics -->
+    <script
+      async
+      defer
+      src="https://scripts.simpleanalyticscdn.com/latest.js"
+    ></script>
+    <noscript
+      ><img
+        src="https://queue.simpleanalyticscdn.com/noscript.gif"
+        alt=""
+        referrerpolicy="no-referrer-when-downgrade"
+    /></noscript>
+  </body>
+</html>
