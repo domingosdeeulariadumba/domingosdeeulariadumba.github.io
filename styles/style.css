@@ -74,6 +74,21 @@ body {
   margin-bottom: -8px;
 }
 
+
+.typing-link img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px auto;
+}
+
+
+@media (max-width: 500px) {
+  .typing-link img {
+    width: 90%;
+  }
+}
+
 .contacts {
   display: flex;
   justify-content: center;
@@ -83,6 +98,13 @@ body {
   color: #aaa;
   flex-wrap: wrap;
   gap: 10px;
+}
+
+@media (max-width: 500px) {
+  .contacts a img {
+    width: 18px;
+    height: 18px;
+  }
 }
 
 footer {
