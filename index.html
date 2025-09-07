@@ -10,81 +10,51 @@
   <meta property="og:title" content="Domingos de Eulária Dumba" />
   <meta property="og:description" content="Data Scientist — portfolio and contact." />
   <meta property="og:image" content="./assets/images/avatar.png" />
+  <script src="scripts/main.js"></script>
 </head>
 
-  <body>
-    <!--Header start-->
-    <header class="header noselect">
-      <div class="header-measure">
-        <a class="header-navbar">
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="index.html">🏠︎ Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="projects.html">☕︎ Projects</a>
-            </li>
-          </ul>
-        </a>
-      </div>
-    </header>
-    <!--end of Header-->
-
-    <!--Profile start-->
-    <div class="profile">
-      <img id="avatar" src="./assets/images/avatar.png" />
-        <a href="https://github.com/domingosdeeulariadumba" class="typing-link">
-          <img 
-          src="https://readme-typing-svg.vercel.app?font=Open+Sans&size=16&duration=2400&pause=100&color=333333&center=true&vCenter=true&width=500&lines=Hello!+%F0%9F%91%8B%F0%9F%8F%BF;I'm+Domingos+|+Data+Scientist" 
-          alt="typing-svg"
-          />
-        </a>
-      <!--Contacts start-->
-      <div id="social-links"></div>
-      <script>
-        height = 20;
-        document.getElementById("social-links").innerHTML = `
-          <b style='margin:50px;margin-bottom:6px; display:inline-block;'></b><br>
-          <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank' style='text-decoration:none;'>
-            <img src='./assets/icons/contacts/email.png' alt="Domingos' GitHub" height='${height}' width='${height}'/>
-          </a>
-          <a href='https://github.com/domingosdeeulariadumba' target='_blank' style='text-decoration:none;'>
-            <img src='./assets/icons/contacts/github.png' alt="Domingos' GitHub" height='${height}' width='${height}'/>
-          </a>
-          <a href='https://linkedin.com/in/domingosdeeulariadumba/' target='_blank' style='text-decoration:none;'>
-            <img src='./assets/icons/contacts/linkedin.png' alt="Domingos' LinkedIn" height='${height}' width='${height}'/>
-          </a>
-          <a href='https://ko-fi.com/domingosdeeulariadumba' target='_blank' style='text-decoration: none;'>
-            <img src='./assets/icons/contacts/ko-fi.png' alt="Domingos' ko-fi" height='${height}' width='${height}'/>
-          </a>
-          <a href='https://linktree.com/domingosdeeulariadumba/' target='_blank' style='text-decoration:none;'>
-            <img src='./assets/icons/contacts/linktree.png' alt="Domingos' Linktree" height='${height}' width='${height}'/><br>
-          </a>
-        `;
-      </script>
-      <!--end of Contacts-->
+<body>
+  <!-- Header start -->
+  <header class="header noselect">
+    <div class="header-measure">
+      <a class="header-navbar">
+        <ul class="nav">
+          <li class="nav-item">
+            <a class="nav-link active" href="index.html">🏠︎ Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="projects.html">☕︎ Projects</a>
+          </li>
+        </ul>
+      </a>
     </div>
-    <!--end of Profile-->
+  </header>
+  <!-- end of Header -->
 
-    <!--Footer start-->
-    <footer></footer>
-    <script>
-    document.querySelector('footer').innerHTML =
-     `© ${new Date().getFullYear()} <strong>Domingos de Eulária Dumba</strong>.`
-     </script>
-    <!--end of Footer-->
+  <!-- Profile start -->
+  <div class="profile">
+    <img id="avatar" src="./assets/images/avatar.png" alt="Domingos' Avatar" />
+    <a href="https://github.com/domingosdeeulariadumba" class="typing-link">
+      <img 
+        src="https://readme-typing-svg.vercel.app?font=Open+Sans&size=16&duration=2400&pause=100&color=333333&center=true&vCenter=true&width=500&lines=Hello!+%F0%9F%91%8B%F0%9F%8F%BF;I'm+Domingos+|+Data+Scientist" 
+        alt="typing-svg"
+      />
+    </a>
 
-    <!-- analytics section -->
-    <script
-      async
-      defer
-      src="https://scripts.simpleanalyticscdn.com/latest.js"
-    ></script>
-    <noscript
-      ><img
-        src="https://queue.simpleanalyticscdn.com/noscript.gif"
-        alt=""
-        referrerpolicy="no-referrer-when-downgrade"
-    /></noscript>
-  </body>
+    <!-- Contacts start -->
+    <div id="social-links"></div>
+    <!-- end of Contacts -->
+  </div>
+  <!-- end of Profile -->
+
+  <!-- Footer start -->
+  <footer></footer>
+  <!-- end of Footer -->
+
+  <!-- Analytics section -->
+  <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
+  <noscript>
+    <img src="https://queue.simpleanalyticscdn.com/noscript.gif" alt="" referrerpolicy="no-referrer-when-downgrade" />
+  </noscript>
+</body>
 </html>
