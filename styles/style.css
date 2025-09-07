@@ -43,20 +43,6 @@ body {
   color: #548494;
 }
 
-.container {
-  max-width: 1006px;
-  width: 100%;
-  position: relative;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top: 50px;
-}
-
-.container img {
-  max-width: 100%;
-  height: auto; /* Maintain aspect ratio */
-}
-
 .profile {
   max-width: 600px;
   margin: auto;
@@ -90,6 +76,12 @@ body {
 
 #social-links a{
   text-decoration: none;
+}
+
+#social-links b{
+  display: inline-block;
+  margin: 50px;
+  margin-bottom: 6px;
 }
 
 footer {

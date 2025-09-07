@@ -8,6 +8,24 @@
   text-rendering: optimizeLegibility;
 }
 
+.container {
+  max-width: 1006px;
+  width: 100%;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 50px;
+}
+
+.container img {
+  max-width: 100%;
+  height: auto;
+}
+
+#wrapper img {
+  border-radius: 12px;
+}
+
 #wrapper a {
   text-decoration: none;
   font-family: Open Sans; 
@@ -15,7 +33,7 @@
   color:#548494;
 }
 
-#post-body,
+
 p {
   font-family: Open Sans;
   text-align: justify;

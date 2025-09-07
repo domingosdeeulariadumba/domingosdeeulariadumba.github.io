@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (socialLinks) {
     const height = 20;
     socialLinks.innerHTML = `
-      <b style='margin:50px;margin-bottom:6px; display:inline-block;'></b><br>
+      <b></b><br>
       <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
         <img src='./assets/icons/contacts/email.png' height='${height}' width='${height}' />
       </a>
