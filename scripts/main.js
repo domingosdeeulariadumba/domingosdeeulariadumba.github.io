@@ -23,9 +23,6 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href='https://ko-fi.com/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/ko-fi.png' height='${height}' width='${height}' />
       </a>
-      <a href='https://linktree.com/domingosdeeulariadumba' target='_blank'>
-        <img src='./assets/icons/contacts/linktree.png' height='${height}' width='${height}' />
-      </a>
     `;
   }
 });
