@@ -5,12 +5,16 @@ document.addEventListener("DOMContentLoaded", () => {
     footer.innerHTML = `© ${new Date().getFullYear()} <strong>Domingos de Eulária Dumba</strong>.`;
   }
 
-  // Social links (optional if you want them here)
+  // Social links
+  // Icons sourced from Flaticon (modified for theme consistency).
   const socialLinks = document.getElementById("social-links");
   if (socialLinks) {
     const height = 20;
     socialLinks.innerHTML = `
       <b></b><br>
+      <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
+        <img src='./assets/icons/contacts/linktree.png' height='${height}' width='${height}' />
+      </a>
       <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
         <img src='./assets/icons/contacts/email.png' height='${height}' width='${height}' />
       </a>
