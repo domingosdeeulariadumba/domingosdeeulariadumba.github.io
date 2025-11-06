@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const height = 20;
     socialLinks.innerHTML = `
       <b></b><br>
-      <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
+      <a href='https://linktr.ee/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/linktree.png' height='${height}' width='${height}' />
       </a>
       <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
