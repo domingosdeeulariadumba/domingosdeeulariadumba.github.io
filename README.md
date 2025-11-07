@@ -7,4 +7,4 @@ Here you can:
 - Read insights about my work
 - Find my contact information
 
-> This website is adapted from the GitHub repository of Christian Rieke: [chrieke/chrieke.github.io](https://github.com/chrieke/chrieke.github.io)
+> This website is adapted from the GitHub repository of Christoph Rieke: [chrieke/chrieke.github.io](https://github.com/chrieke/chrieke.github.io)
