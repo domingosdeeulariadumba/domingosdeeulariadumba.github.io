@@ -12,11 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const height = 20;
     socialLinks.innerHTML = `
       <b></b><br>
-      <a href='https://linktr.ee/domingosdeeulariadumba' target='_blank'>
-        <img src='./assets/icons/contacts/linktree.png' height='${height}' width='${height}' />
-      </a>
-      <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
-        <img src='./assets/icons/contacts/email.png' height='${height}' width='${height}' />
+      <a href='https://linkedin.com/in/domingosdeeulariadumba' target='_blank'>
+        <img src='./assets/icons/contacts/linkedin.png' height='${height}' width='${height}' />
       </a>
       <a href='https://github.com/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/github.png' height='${height}' width='${height}' />
@@ -24,8 +21,11 @@ document.addEventListener("DOMContentLoaded", () => {
       <a href='https://pypi.org/user/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/pypi.png' height='${height}' width='${height}' />
       </a>
-      <a href='https://linkedin.com/in/domingosdeeulariadumba' target='_blank'>
-        <img src='./assets/icons/contacts/linkedin.png' height='${height}' width='${height}' />
+      <a href='https://linktr.ee/domingosdeeulariadumba' target='_blank'>
+        <img src='./assets/icons/contacts/linktree.png' height='${height}' width='${height}' />
+      </a>
+      <a href='mailto:domingosdeeulariadumba@gmail.com' target='_blank'>
+        <img src='./assets/icons/contacts/email.png' height='${height}' width='${height}' />
       </a>
       <a href='https://ko-fi.com/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/ko-fi.png' height='${height}' width='${height}' />
