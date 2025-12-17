@@ -80,8 +80,11 @@ body {
 
 #social-links b{
   display: inline-block;
-  margin: 50px;
+  margin-top: 1rem;
   margin-bottom: 6px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
 }
 
 footer {
@@ -89,4 +92,10 @@ footer {
   text-align: center; 
   margin-top:6px;
   color: #548494;
+}
+
+.embedded-dashboard {
+  width: 100%;
+  min-height: 60vh;
+  border: none;
 }
