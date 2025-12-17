@@ -32,14 +32,14 @@ body {
   line-height: 20px;
   font-family: Open Sans;
   font-size: small;
-  margin-left: -70px;
+  margin-left: -40px;
 }
 
 .nav-link.active {
   font-weight: bold;
   font-family: Open Sans;
   font-size: small;
-  margin-left: -60px;
+  margin-left: -30px;
   color: #548494;
 }
 
