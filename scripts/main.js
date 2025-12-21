@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Social links
-  // Icons sourced from Flaticon & Icons-For-Free.com (modified for theme consistency).
+  // Icons sourced from Flaticon, icons8.com, and Icons-For-Free.com (modified for theme consistency).
   const socialLinks = document.getElementById("social-links");
   if (socialLinks) {
     const height = 20;
@@ -17,6 +17,9 @@ document.addEventListener("DOMContentLoaded", () => {
       </a>
       <a href='https://github.com/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/github.png' height='${height}' width='${height}' />
+      </a>
+      <a href='https://huggingface.co/domingosdeeulariadumba' target='_blank'>
+        <img src='./assets/icons/contacts/huggingface.png' height='${height}' width='${height}' />
       </a>
       <a href='https://pypi.org/user/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/pypi.png' height='${height}' width='${height}' />
