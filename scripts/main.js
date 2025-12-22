@@ -57,4 +57,4 @@ fetch('https://domingosdeeulariadumba-dashboard-ao.hf.space/api/current-data-ao'
     inflationCPI.textContent = data['Inflation, Consumer Prices (Annual %)'];
     unemployment.textContent = data['Unemployment Rate, ILO Estimate (Annual %)'];
   })
-  .catch(error => console.error('Error fetching data:', error));
+  .catch(error => console.error('Error fetching data: ', error));
