@@ -43,16 +43,16 @@ fetch('https://domingosdeeulariadumba-dashboard-ao.hf.space/api/current-data-ao'
   .then(data => {
     // Getting the HTML elements by their IDs
     const temperatureInLuanda = document.getElementById('Temperature in Luanda');
-    const eurToAOA = document.getElementById('EUR -> AOA (Exchange Rate)');
-    const usdToAOA = document.getElementById('USD -> AOA (Exchange Rate)');
+    const eurToAOA = document.getElementById('EUR ➤ AOA (Exchange Rate)');
+    const usdToAOA = document.getElementById('USD ➤ AOA (Exchange Rate)');
     const gdpPercapitaGrowth = document.getElementById('GDP per Capita Growth (Annual %)');
     const inflationCPI = document.getElementById('Inflation, Consumer Prices (Annual %)');
     const unemployment = document.getElementById('Unemployment Rate, ILO Estimate (Annual %)');
 
     // Passing the data into HTML elements
     temperatureInLuanda.textContent = data['Temperature in Luanda'];
-    eurToAOA.textContent = data['EUR -> AOA (Exchange Rate)'];
-    usdToAOA.textContent = data['USD -> AOA (Exchange Rate)'];
+    eurToAOA.textContent = data['EUR ➤ AOA (Exchange Rate)'];
+    usdToAOA.textContent = data['USD ➤ AOA (Exchange Rate)'];
     gdpPercapitaGrowth.textContent = data['GDP per Capita Growth (Annual %)'];
     inflationCPI.textContent = data['Inflation, Consumer Prices (Annual %)'];
     unemployment.textContent = data['Unemployment Rate, ILO Estimate (Annual %)'];
