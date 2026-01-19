@@ -1,0 +1,27 @@
+/* Under Construction Page */
+.under-construction {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  text-align: center;
+}
+
+.under-construction img {
+  max-width: 300px;
+  height: auto;
+}
+
+.under-construction p {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+/* Optional: dark mode support if you have one */
+@media (prefers-color-scheme: dark) {
+  .under-construction p {
+    color: #cccccc;
+  }
+}

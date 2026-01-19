@@ -1,0 +1,4 @@
+*.md
+!README.md
+blogUpdated.html
+post.html

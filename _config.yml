@@ -1,0 +1,20 @@
+title: Domingos de Eulária Dumba
+description: Data Scientist
+url: "https://www.domingosdeeulariadumba.com"
+baseurl: ""
+
+markdown: kramdown
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+exclude:
+  - README.md
+  - TODO.md
+  - .gitignore
+  - .github
+
+include:
+  - scripts/
+  - styles/
