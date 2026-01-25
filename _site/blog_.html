@@ -1,5 +1,3 @@
----
----
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -15,7 +13,7 @@
     <meta property="og:site_name" content="Domingos de Eulária Dumba" />
     <link rel="icon" href="./assets/icons/favicon.ico" />
     <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/projects.css" />
+    <link rel="stylesheet" href="./styles/blog.css" />
     <script src="scripts/main.js"></script>
   </head>
 
@@ -26,7 +24,7 @@
         <a class="header-navbar">
           <ul class="nav">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">🏠︎ home</a>
+              <a class="nav-link" href="home.html">🏠︎ home</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="projects.html">☕︎ projects</a>
@@ -41,19 +39,10 @@
     <!--end of Header-->
 
     <!-- Main content -->
-    <main class="container">        
-      {% for post in site.posts %}
-        <article id="wrapper" class="home">
-            <h1 id="title">{{ post.title }}</h1>
-            <p id="date">Published on {{ post.date | date: "%B %d, %Y" }}</p>
-            <p id="cover">
-            <img src="./assets/blog/{{ post.cover }}" alt="cover"/>
-            </p>
-            <p>{{ post.excerpt | truncatewords: 18 }}</p>
-            <a href="{{ post.url }}">Read the full article 📝</a>
-            <br><br>
-        </article>
-      {% endfor %}
+    <main class="under-construction">
+      <img src="./assets/icons/blog/building.gif" alt="Section under construction" />
+      <!-- Icon: "Puzzle" by Lordicon (https://lordicon.com/icons/doodle/outline?q=puzzle). Modified for theme consistency -->
+      <p>This section is being built!</p>
     </main>
     
     <!--Footer start-->
