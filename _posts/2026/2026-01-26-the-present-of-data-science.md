@@ -48,7 +48,7 @@ The reason for including Machine Learning Engineering: we undeniably have now a 
 
 Pure Data Scientists might now share the same feeling about Machine Learning Engineering just like pure Statisticians did with Data Science when it was emerging (mostly during the 2010s). The cycle repeats itself.
 
-There might not exist a Tukey or a Cleveland now, but we may all agree that, again, it is a new invitation to enlarge the frontiers of the field of Data Science... and, inherently, of Statistics.
+There might not exist a Tukey or a Cleveland to advocate for a new direction. But we may all agree that it is an invitation to enlarge the frontiers of the field of Data Science... and again, inherently, of Statistics.
 
 
 ## References
