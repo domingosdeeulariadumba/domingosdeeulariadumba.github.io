@@ -14,6 +14,8 @@ As I write this article, almost 25 years have passed since the first publication
 
 Donoho made an outstanding work on presenting the evolutionary arch of the field as well as the rationale and the individuals involved in it. To make it clearer, I will break down the topic I proposed in three parts, starting with the building blocks of Data Science, by borrowing and reflecting on the ideas of him and his peers.
 
+
+<br>
 ### 1. Data Science: the building blocks
 What first popped up in my head when I came across Donoho's article was "Oh, so Data Science was already a thing before Cleveland coined it!" or even before the 2012 Harvard Business Review (HBR) claim about it being the "Sexiest Job of the 21st Century". Until I came to the conclusion that it is worth a "Yes" and a "No".
 
@@ -26,6 +28,7 @@ My attempt to make even more explicit the relationship and relevance of these tw
 Despite this attempt, it is also worth mentioning that this separation of concerns has mostly resulted in what we may call the data and infrastructure tension.
 
 
+<br>
 ### 2. Existential Crisis: the data and infrastructure dichotomy
 I started my journey as a Data Analyst through the IBM Specialization, after a career transition from Industrial Engineering. But I then found Machine Learning much more interesting, and made the decision to push my skills toward what's expected of a Data Scientist (so that my first position in the field was related to NLP). I have experienced the massive emphasis on computing pointed out by Donoho during the Data Analyst Specialization. The program is worth it, but that does not make you good at learning from data from a statistics standpoint as you build your computing expertise along the way (unless you are highly curious and willing to look for more as I eventually decided to do). Looking back at what I have experienced myself, maybe if I was a statistician, as David is, I would feel that somehow there's an attempt to ostracize statistics from the data ecosystem. But I am mostly sure that is not the case.
 
@@ -34,6 +37,7 @@ As a result, today I find myself reading lots of Statistics and Machine Learning
 The motto here is effort and time allocation, as David also stated: if you somehow spend 80% of the time (I made up this number) dealing with infrastructure or computing instead of data, it should be reasonable to question whether you are a still a Data Scientist.
 
 
+<br>
 ### 3. Machine Learning Engineering: a new direction
 The plot below illustrates the Google Trends for web searches of the words "Machine Learning Engineer", "Data Scientist", and "Statistician" from 1/1/2012 through 1/25/2026.
 
@@ -51,6 +55,7 @@ Pure Data Scientists might now share the same feeling about Machine Learning Eng
 There might not exist a Tukey or a Cleveland now to advocate for a new direction. But we may all agree that it is an invitation to enlarge the frontiers of the field of Data Science... and again, inherently, of Statistics.
 
 
+<br> <br>
 ## References
 <a href="https://doi.org/10.1214/ss/1009213726">Breiman, L. (2001). Statistical Modeling: The Two Cultures. Statistical Science, 16(3), 199-231.</a>
 
