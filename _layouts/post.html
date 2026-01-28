@@ -44,7 +44,7 @@
             <h1 id="title">{{ page.title }}</h1>
             <p id="date">
                 Published on {{ page.date | date: "%b %d, %Y" }}
-                <span class="last-update"> • Updated on {{ page.date | date: "%b %d, %Y" }}</span>
+                <span class="last-update"> • Updated on {{ page.last_update | date: "%b %d, %Y" }}</span>
             </p>
             <p id="cover">
             <img src="/../assets/blog/{{page.cover}}" alt="cover"/>    

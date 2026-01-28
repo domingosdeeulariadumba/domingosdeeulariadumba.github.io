@@ -2,7 +2,7 @@
 layout: post
 title: "The Present of Data Science: perspectives and what we should learn from Tukey, Chambers, Cleveland, Breiman, and Donoho"
 date: 2026-01-26
-last-update: 2026-01-28
+last_update: 2026-01-28
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/01/cover.png"
