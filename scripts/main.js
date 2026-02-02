@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
   if (socialLinks) {
     const height = 20;
     socialLinks.innerHTML = `
-      </b><br>
+      <br>
       <a href='https://linkedin.com/in/domingosdeeulariadumba' target='_blank'>
         <img src='./assets/icons/contacts/linkedin.png' height='${height}' width='${height}' />
       </a>
@@ -60,5 +60,4 @@ function fetchCurrentData() {
     })
     .catch(error => console.error('Error fetching data: ', error));
 }
-fetchCurrentData(); // Running immediately on page load
-setInterval(fetchCurrentData, 15 * 60 * 1000); // Refreshing every 15 minutes
+fetchCurrentData();
