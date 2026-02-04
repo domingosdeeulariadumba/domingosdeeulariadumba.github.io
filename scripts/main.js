@@ -1,13 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener('DOMContentLoaded', () => {
   // Footer
-  const footer = document.querySelector("footer");
+  const footer = document.querySelector('footer');
   if (footer) {
     footer.innerHTML = `© ${new Date().getFullYear()} <strong>Domingos de Eulária Dumba</strong>.`;
   }
 
   // Social links
   // Icons sourced from Flaticon, icons8.com, and Icons-For-Free.com (modified for theme consistency).
-  const socialLinks = document.getElementById("social-links");
+  const socialLinks = document.getElementById('social-links');
   if (socialLinks) {
     const height = 20;
     socialLinks.innerHTML = `
