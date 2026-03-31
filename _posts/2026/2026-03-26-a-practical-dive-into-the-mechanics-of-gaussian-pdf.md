@@ -192,14 +192,18 @@ This is the exact expression used today to model an array of phenomena, from the
 
 <br> <br>
 ## References
+Brosche, P. (2002). Die Wiederauffindung der Ceres im Jahre 1801 [The rediscovery of Ceres in 1801]. In Acta Historica Astronomiae, Vol. 14. Harri Deutsch.
+
 Gauss, C. F. (1809). Theoria motus corporum coelestium in sectionibus conicis solem ambientium. (English trans. Theory of the Motion of the Heavenly Bodies, 1857).
 
 Gauss, C. F. (1995). Theory of the Combination of Observations Least Subject to Errors: Part One, Part Two, Supplement. (G. W. Stewart, Trans.). Society for Industrial and Applied Mathematics. (Original work published 1823).
-
-Pearson, K. (1893). Contributions to the Mathematical Theory of Evolution [Read November 16, 1893]. Philosophical Transactions of the Royal Society of London, 185, 71–110.
 
 Hoskin, M. (Churchill College, Cambridge). Bode's Law and the Discovery of Ceres. Available at: https://web.archive.org/web/20071116022100/http://www.astropa.unipa.it/HISTORY/hoskin.html (Accessed March 11, 2026).
 
 NASA Jet Propulsion Laboratory. (2016). Ceres: Keeping Well-Guarded Secrets for 215 Years. Available at: https://www.jpl.nasa.gov/news/ceres-keeping-well-guarded-secrets-for-215-years/ (February 29, 2026).
 
 Ogawa, J. (1950). Note on the Markoff's Theorem on Least Squares. Osaka Mathematical Journal, 2(2), 175–186.
+
+Pearson, K. (1893). Contributions to the Mathematical Theory of Evolution [Read November 16, 1893]. Philosophical Transactions of the Royal Society of London, 185, 71–110.
+
+Walker, H. M. (1929). Studies in the History of Statistical Method: With Special Reference to Certain Educational Problems. Williams & Wilkins Co.
