@@ -4,6 +4,9 @@ url: "https://www.domingosdeeulariadumba.com"
 baseurl: ""
 
 markdown: kramdown
+kramdown:
+  math_engine: mathjax
+  math_engine_opts: {}
 theme: minima
 plugins:
   - jekyll-feed
