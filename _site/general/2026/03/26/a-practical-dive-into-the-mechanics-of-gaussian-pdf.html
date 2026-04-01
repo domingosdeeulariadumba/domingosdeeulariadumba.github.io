@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Practical Dive Into the Mechanics of the Gaussian PDF • Domingos de Eulária Dumba</title>
-    <meta name="description" content="If you have invested considerable time in Statistics or Data Science, you have inevitably relied on Gaussian Probability Density Function (whether for A/B te..." />
+    <meta name="description" content="If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="A Practical Dive Into the Mechanics of the Gaussian PDF" />
-    <meta property="og:description" content="If you have invested considerable time in Statistics or Data Science, you have inevitably relied on Gaussian Probability Density Function (whether for A/B te..." />
+    <meta property="og:description" content="If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
     <meta property="og:image" content="./assets/images/avatar.png" />
     <meta property="og:url" content="https://domingosdeeulariadumba.github.io/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html" />
     <meta property="og:site_name" content="Domingos de Eulária Dumba" />
@@ -50,13 +50,13 @@
             <h1 id="title">A Practical Dive Into the Mechanics of the Gaussian PDF</h1>
             <p id="date">
                 Published on Mar 26, 2026
-                <span class="last-update"> • Updated on Mar 26, 2026</span>
+                <span class="last-update"> • Updated on Mar 31, 2026</span>
             </p>
             <p id="cover">
             <img src="/../assets/blog/2026/03/cover.png" alt="cover"/>    
             Credit: benjaminec/Getty Images
             </p>            
-            <p>If you have invested considerable time in Statistics or Data Science, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
+            <p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
 
 <p>But have you ever taken the time to think about how we arrived at that expression?</p>
 
@@ -95,7 +95,7 @@ $$L = \prod_{i=1}^{n} \Phi(\Delta_i) \quad [1]$$
 $$LL = \sum_{i=1}^{n} \ln [\Phi(\Delta_i)]$$
 </div>
 
-<p>Now, a crucial question arises: which value of $x$ maximizes this joint probability to give us the most accurate estimation of Ceres’ position? In calculus, this is solved by finding where the derivative equals zero:</p>
+<p>Now, a crucial question arises: which value of \(x\) maximizes this joint probability to give us the most accurate estimation of Ceres’ position? In calculus, this is solved by finding where the derivative equals zero:</p>
 <div align="center">
 $$\frac{d}{dx} LL = 0$$
 </div>
@@ -183,7 +183,7 @@ $$m^2 = \int_{-\infty}^{+\infty}\Delta^2\Phi(\Delta)d\Delta$$
 
 <p>Substituting our previously derived function (Equation [5]), we obtain:</p>
 <div align="center">
-$$m^2 = \frac{h}{2\pi}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
+$$m^2 = \frac{h}{\sqrt{\pi}}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
 </div>
 
 <p>We solve this using integration by parts (\(\int udv = uv - \int vdu\)). Let:</p>

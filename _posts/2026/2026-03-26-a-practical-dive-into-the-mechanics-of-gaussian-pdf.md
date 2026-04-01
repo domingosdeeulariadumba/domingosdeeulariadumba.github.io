@@ -2,7 +2,7 @@
 layout: post
 title: "A Practical Dive Into the Mechanics of the Gaussian PDF"
 date: 2026-03-26
-last_update: 2026-03-26
+last_update: 2026-03-31
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/03/cover.png"
@@ -11,7 +11,7 @@ cover_credit: "benjaminec/Getty Images"
 
 
 
-If you have invested considerable time in Statistics or Data Science, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks). 
+If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks). 
 
 But have you ever taken the time to think about how we arrived at that expression? 
 
@@ -54,7 +54,7 @@ Since it is mathematically simpler to work with sums than products, we transform
 $$LL = \sum_{i=1}^{n} \ln [\Phi(\Delta_i)]$$
 </div>
 
-Now, a crucial question arises: which value of $x$ maximizes this joint probability to give us the most accurate estimation of Ceres' position? In calculus, this is solved by finding where the derivative equals zero:
+Now, a crucial question arises: which value of $$x$$ maximizes this joint probability to give us the most accurate estimation of Ceres' position? In calculus, this is solved by finding where the derivative equals zero:
 <div align="center">
 $$\frac{d}{dx} LL = 0$$
 </div>
@@ -146,7 +146,7 @@ $$m^2 = \int_{-\infty}^{+\infty}\Delta^2\Phi(\Delta)d\Delta$$
 
 Substituting our previously derived function (Equation [5]), we obtain:
 <div align="center">
-$$m^2 = \frac{h}{2\pi}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
+$$m^2 = \frac{h}{\sqrt{\pi}}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
 </div>
 
 We solve this using integration by parts ($$\int udv = uv - \int vdu$$). Let:
