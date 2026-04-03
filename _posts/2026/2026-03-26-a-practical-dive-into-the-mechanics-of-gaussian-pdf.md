@@ -23,7 +23,7 @@ This article walks through the mathematical foundation of the Normal PDF, starti
 ![Ceres](/assets/blog/2026/03/ceres.jpg)
 Ceres Image Capture (Credit: NASA)
 
-On January 1, 1801, what was then announced as the new planet Ceres (later classified as the first asteroid and now a dwarf planet) was discovered by Giuseppe Piazzi at the Palermo Astronomical Observatory, in Sicily. This discovery occurred right before Piazzi was invited to join the "Celestial Police" (a group of twenty-four elite astronomers tasked with finding a suspected "missing" planet between Mars and Jupiter). While their collective efforts led to several other astronomical breakthroughs, the predicted planet itself remained elusive.
+On January 1, 1801, what was then announced as the new planet Ceres (later classified as the first asteroid and now a dwarf planet) was discovered by Giuseppe Piazzi at the Palermo Astronomical Observatory, in Sicily. This discovery occurred before Piazzi was invited to join the "Celestial Police" (a group of twenty-four elite astronomers tasked with finding a suspected "missing" planet between Mars and Jupiter). While their collective efforts led to several other astronomical breakthroughs, the predicted planet itself remained elusive.
 
 
 Piazzi initially mistook Ceres for a comet while searching for the 87th star in the catalog of the French astronomer Abbé de Lacaille. He tracked the object twenty-four times before his final sighting on February 11th. By the time his observations were published, in September of that year, Piazzi had become convinced that its slow, uniform movement suggested something far more significant than a mere comet.
