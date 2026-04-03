@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-03T10:04:55+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-03T21:06:40+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
 
 <p>But have you ever taken the time to think about how we arrived at that expression?</p>
 
@@ -78,18 +78,56 @@ $$\frac{d}{\Phi(\Delta)} \Phi = k \Delta {d\Delta}$$
 <div align="center">
 $$\int\frac{d}{\Phi(\Delta)} \Phi = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
+$$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
 $$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
 </div>
 
-<p>Recall that \(\Phi(\Delta)\) represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let \(\exp(c) = A\) and \(\frac{1}{2} k = -h^2\), where \(h\) is what Gauss termed the “measure of precision” (here, the constant \(k\) is set to negative in order to form a valid probability density function, since for \(k&gt;0\) the likelihood of the observations, \(\Phi(\Delta)\), would grow unboundedly as \(\Delta \to \pm\infty\), yielding probabilities greater than one). And since the total probability must sum to 1, we solve for \(A\):</p>
+<p>Recall that \(\Phi(\Delta)\) represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let \(\exp(c) = A\) and \(\frac{1}{2} k = -h^2\), where \(h\) is what Gauss termed the “measure of precision” (here, the constant \(k\) is set to negative since the likelihood of the observations, \(\Phi(\Delta)\), must decay for large errors). And given that the total probability must sum to 1, we solve for \(A\):</p>
 <div align="center">
 $$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta \quad [5]$$
 </div>
 
 <p>Switching to polar coordinates, and “[…] by the elegant theorem first discovered by Laplace […]”, we have that:</p>
 <div align="center">
- $$\int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}$$. 
+ $$\int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}\, {}^{\,*}$$
 </div>
+
+<details style="color: #548494">
+  <summary style="color: #548494">* Expand to see the full demonstration</summary>
+  <p>Since \(x\) is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:</p>
+  <div align="center">
+$$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$
+$$I^2 = \int\int_{\mathbb{R}} e^{-(x^2 + y^2)} dxdy$$
+</div>
+
+  <p>To solve this, we transform the integral into polar coordinates, where \(x^2 + y^2 = r^2\) and the differential area element \(dx dy\) becomes \(r dr d\theta\). The limits of integration then change from the entire \(xy\)-plane to \(r \in [0, \infty)\) and \(\theta \in [0, 2\pi)\):</p>
+  <div align="center">
+$$I^2 = \int_{0}^{2\pi}\int_{0}^{\infty} re^{-r^2} dr d\theta$$
+</div>
+
+  <p>Since the integrand does not depend on \(\theta\), we can separate the integrals:</p>
+  <div align="center">
+$$I_1 = \Big(\int_{0}^{2\pi}d\theta \Big) \Big(\int_{0}^{\infty} re^{-r^2} dr \Big)$$
+</div>
+
+  <p>Let us denote \(I_1\) as the integral dependent on \(\theta\) and \(I_2\) its \(r\) counterpart:</p>
+  <div align="center">
+$$I^2 = I_1 \cdot I_2$$
+</div>
+
+  <p>The result of \(I_1\) is straightforward:</p>
+  <div align="center">
+$$I^2 = 2\pi \cdot I_2$$
+</div>
+
+  <p>For the second part, we use \(u\)-substitution. Let \(u = -r^2 \implies -\frac{1}{2}du = rdr\), which results in:</p>
+  <div align="center">
+$$I^2 = 2\pi \cdot -\frac{1}{2}\int_{0}^{-\infty}e^udu$$
+$$I^2 = -\pi \cdot (e^{-\infty} - 1)$$
+$$I^2 = \pi \implies I = \sqrt{\pi}$$
+</div>
+  <p><br /></p>
+</details>
 
 <p>Therefore, from equation [5], we obtain:</p>
 <div align="center">
@@ -108,10 +146,10 @@ $$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} 
 
 <p>This result cemented the Method of Ordinary Least Squares (OLS). It proved mathematically that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors.</p>
 
-<p>This framework was robust enough to recover Ceres from the void. However, its true potential was only beginning to be realized; the Gaussian PDF would soon move from the stars to nearly every field of human inquiry.</p>
+<p>The presented framework was robust enough to recover Ceres from the void. However, its true potential was only beginning to be realized; the Gaussian PDF would soon move from the stars to nearly every field of human inquiry.</p>
 
 <p><br /></p>
-<h3 id="3-beyond-the-stars-a-new-perspective-on-precison">3. Beyond the Stars: a new perspective on Precison</h3>
+<h3 id="3-beyond-the-stars-a-new-perspective-on-precision">3. Beyond the Stars: a new perspective on Precision</h3>
 <p>Over a decade later, Gauss revisited and refined his ideas from Theoria Motus, solidifying the OLS method in his 1823 work, Theoria Combinationis. The most remarkable shift in this later work was his formal derivation of the “mean error”, \(m\).
 Gauss realized that “[…] taken from \(x = -\infty\) to \(x = +\infty\) (the mean square of \(x\)) seems most appropriate to generally define and quantify the uncertainty of the observations. Thus, given two systems of observations which differ in their likelihoods, we will say that the one for which the integral \(\int xx\varphi(x)dx\) is smaller is the more precise” (Note: He here used \(x\) and \(\varphi(x)\) to denote the error and its probability, which we have referred to as \(\Delta\) and \(\Phi(\Delta)\) throughout this article, respectively).</p>
 

@@ -2,7 +2,7 @@
 layout: post
 title: "A Practical Dive Into the Mechanics of the Gaussian PDF"
 date: 2026-03-26
-last_update: 2026-03-31
+last_update: 2026-04-03
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/03/cover.png"
@@ -97,18 +97,56 @@ By separating the variables and integrating both sides:
 <div align="center">
 $$\int\frac{d}{\Phi(\Delta)} \Phi = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
+$$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
 $$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
 </div>
 
-Recall that $$\Phi(\Delta)$$ represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let $$\exp(c) = A$$ and $$\frac{1}{2} k = -h^2$$, where $$h$$ is what Gauss termed the "measure of precision" (here, the constant $$k$$ is set to negative in order to form a valid probability density function, since for $$k>0$$ the likelihood of the observations, $$\Phi(\Delta)$$, would grow unboundedly as $$\Delta \to \pm\infty$$, yielding probabilities greater than one). And since the total probability must sum to 1, we solve for $$A$$:
+Recall that $$\Phi(\Delta)$$ represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let $$\exp(c) = A$$ and $$\frac{1}{2} k = -h^2$$, where $$h$$ is what Gauss termed the "measure of precision" (here, the constant $$k$$ is set to negative since the likelihood of the observations, $$\Phi(\Delta)$$, must decay for large errors). And given that the total probability must sum to 1, we solve for $$A$$:
 <div align="center">
 $$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta \quad [5]$$
 </div>
 
 Switching to polar coordinates, and "[...] by the elegant theorem first discovered by Laplace [...]", we have that:
 <div align="center">
- $$\int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}$$. 
-</div> 
+ $$\int_{-\infty}^{+\infty} e^{-x^2} dx = \sqrt{\pi}\, {}^{\,*}$$
+</div>
+
+<details markdown="1" style="color: #548494">
+<summary style="color: #548494">* Expand to see the full demonstration</summary>
+Since $$x$$ is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:
+<div align="center">
+$$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$
+$$I^2 = \int\int_{\mathbb{R}} e^{-(x^2 + y^2)} dxdy$$
+</div>
+
+To solve this, we transform the integral into polar coordinates, where $$x^2 + y^2 = r^2$$ and the differential area element $$dx dy$$ becomes $$r dr d\theta$$. The limits of integration then change from the entire $$xy$$-plane to $$r \in [0, \infty)$$ and $$\theta \in [0, 2\pi)$$:
+<div align="center">
+$$I^2 = \int_{0}^{2\pi}\int_{0}^{\infty} re^{-r^2} dr d\theta$$
+</div>
+
+Since the integrand does not depend on $$\theta$$, we can separate the integrals:
+<div align="center">
+$$I_1 = \Big(\int_{0}^{2\pi}d\theta \Big) \Big(\int_{0}^{\infty} re^{-r^2} dr \Big)$$
+</div>
+
+Let us denote $$I_1$$ as the integral dependent on $$\theta$$ and $$I_2$$ its $$r$$ counterpart:
+<div align="center">
+$$I^2 = I_1 \cdot I_2$$
+</div>
+
+The result of $$I_1$$ is straightforward:
+<div align="center">
+$$I^2 = 2\pi \cdot I_2$$
+</div>
+
+For the second part, we use $$u$$-substitution. Let $$u = -r^2 \implies -\frac{1}{2}du = rdr$$, which results in:
+<div align="center">
+$$I^2 = 2\pi \cdot -\frac{1}{2}\int_{0}^{-\infty}e^udu$$
+$$I^2 = -\pi \cdot (e^{-\infty} - 1)$$
+$$I^2 = \pi \implies I = \sqrt{\pi}$$
+</div>
+<br>
+</details>
 
 Therefore, from equation [5], we obtain:
 <div align="center">
@@ -127,11 +165,11 @@ $$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} 
 
 This result cemented the Method of Ordinary Least Squares (OLS). It proved mathematically that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors.
 
-This framework was robust enough to recover Ceres from the void. However, its true potential was only beginning to be realized; the Gaussian PDF would soon move from the stars to nearly every field of human inquiry.
+The presented framework was robust enough to recover Ceres from the void. However, its true potential was only beginning to be realized; the Gaussian PDF would soon move from the stars to nearly every field of human inquiry.
 
 
 <br>
-### 3. Beyond the Stars: a new perspective on Precison
+### 3. Beyond the Stars: a new perspective on Precision
 Over a decade later, Gauss revisited and refined his ideas from Theoria Motus, solidifying the OLS method in his 1823 work, Theoria Combinationis. The most remarkable shift in this later work was his formal derivation of the "mean error", $$m$$.
 Gauss realized that "[...] taken from $$x = -\infty$$ to $$x = +\infty$$ (the mean square of $$x$$) seems most appropriate to generally define and quantify the uncertainty of the observations. Thus, given two systems of observations which differ in their likelihoods, we will say that the one for which the integral $$\int xx\varphi(x)dx$$ is smaller is the more precise" (Note: He here used $$x$$ and $$\varphi(x)$$ to denote the error and its probability, which we have referred to as $$\Delta$$ and $$\Phi(\Delta)$$ throughout this article, respectively).
 
