@@ -103,7 +103,7 @@ $$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
 
 Recall that $$\Phi(\Delta)$$ represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let $$\exp(c) = A$$ and $$\frac{1}{2} k = -h^2$$, where $$h$$ is what Gauss termed the "measure of precision" (here, the constant $$k$$ is set to negative since the likelihood of the observations, $$\Phi(\Delta)$$, must decay for large errors). And given that the total probability must sum to 1, we solve for $$A$$:
 <div align="center">
-$$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta \quad [5]$$
+$$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta$$
 </div>
 
 Switching to polar coordinates, and "[...] by the elegant theorem first discovered by Laplace [...]", we have that:
@@ -148,7 +148,7 @@ $$I^2 = \pi \implies I = \sqrt{\pi}$$
 <br>
 </details>
 
-Therefore, from equation [5], we obtain:
+Therefore, this results in:
 <div align="center">
 $$1 = A \cdot \frac{\sqrt{\pi}}{h}$$
 </div>
@@ -160,7 +160,7 @@ $$\Phi(\Delta) = \frac{h}{\sqrt{\pi}} \cdot e^{-hh\Delta\Delta}$$
 
 Substituting this back into our Likelihood Function (Equation [1]), we arrive at the total Likelihood:
 <div align="center">
-$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} \quad [6]$$ 
+$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} \quad [5]$$ 
 </div>
 
 This result cemented the Method of Ordinary Least Squares (OLS). It proved mathematically that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors.
@@ -182,7 +182,7 @@ We begin by expressing the mean square of the error as the expected value of $$\
 $$m^2 = \int_{-\infty}^{+\infty}\Delta^2\Phi(\Delta)d\Delta$$
 </div>
 
-Substituting our previously derived function (Equation [5]), we obtain:
+Substituting $$\Phi(\Delta)$$ from our previously derived function, we obtain:
 <div align="center">
 $$m^2 = \frac{h}{\sqrt{\pi}}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
 </div>
@@ -208,12 +208,12 @@ The first term of $$m^2$$ vanishes as, for $$\pm \infty$$,  $$\Delta$$ becomes a
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
 $$m^2 = \frac{1}{2h^2}$$
-$$m = \frac{1}{h\sqrt{2}} \quad [7]$$
+$$m = \frac{1}{h\sqrt{2}} \quad [76$$
 </div>
 
 
 #### 3.2 From Measure of Precision to Standard Deviation
-We can now rewrite our error function in Equation [5] in terms of $$m$$:
+We can now rewrite our error function in Equation [4] in terms of $$m$$:
 <div align="center">
 $$\Phi(\Delta) = \frac{1}{m\sqrt{2\pi}} \cdot e^{- \frac{1}{2m^2}\Delta^2}$$
 </div>
@@ -243,6 +243,6 @@ And this is the exact expression used today to model an array of phenomena, from
 
 <a href="https://projecteuclid.org/euclid.ojm/1200686035">Ogawa, J. (1950). Note on the Markoff's Theorem on Least Squares. Osaka Mathematical Journal, 2(2), 175–186. Last access on April 02, 2026.</a>
 
-<a href="https://royalsocietypublishing.org/doi/10.1098/rsta.1894.0003">Pearson, K. (1893). Contributions to the Mathematical Theory of Evolution [Read November 16, 1893]. Philosophical Transactions of the Royal Society of London, 185, 71–110. Last access on March 22, 2026.</a>
+<a href="https://royalsocietypublishing.org/doi/10.1098/rsta.1894.0003">Pearson, K. (1893). Contributions to the Mathematical Theory of Evolution. Philosophical Transactions of the Royal Society of London, 185, 71–110. Last access on March 22, 2026.</a>
 
 <a href="https://archive.org/details/studiesinhistory00walk">Walker, H. M. (1929). Studies in the History of Statistical Method: With Special Reference to Certain Educational Problems. Williams & Wilkins Co. Last access on April 02, 2026.</a>
