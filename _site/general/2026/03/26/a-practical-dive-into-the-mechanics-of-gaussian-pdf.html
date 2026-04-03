@@ -82,10 +82,10 @@ Ceres Image Capture (Credit: NASA)</p>
 <h5 id="a-the-maximum-likelihood-estimation">a) The Maximum Likelihood Estimation</h5>
 <p>Let \(M_1,\quad M_2,\quad M_3,\quad \ldots,\quad M_n\) be several independent observations of Ceres. Let also \(x\) be the actual or “true value” of Ceres’ position. The errors of these observations can be expressed as:</p>
 <div align="center"> 
-$$\Delta_1 = (M_1 - x), \quad\Delta_2 = (M_2 - x), \quad\Delta_3 = (M_3 - x), \quad \ldots, \quad \Delta_n = (M_n - x)$$
+$$\Delta_1 = (M_1 - x), \quad\Delta_2 = (M_2 - x), \quad \ldots, \quad \Delta_n = (M_n - x)$$
 </div>
 
-<p>Gauss defines a probability density function, \(L,\) that describes how likely any error of measurement is as \(\Phi(\Delta_i)\). To find the total probability of seeing this specific set of observations, we take the product of their individual probabilities (recalling from probability theory that  \(P(A_1 \cap A_2 \cap A_3 \cap \ldots \cap A_n) = P(A_1) \cdot P(A_2) \cdot P(A_3) \cdot \ldots \cdot P(A_n)\), for \(n\) independent events):</p>
+<p>Gauss defines a probability density function, \(L,\) that describes how likely any error of measurement is as \(\Phi(\Delta_i)\). To find the total probability of seeing this specific set of observations, we take the product of their individual probabilities (recalling from probability theory that  \(P(A_1 \cap A_2 \cap \ldots \cap A_n) = P(A_1) \cdot P(A_2) \cdot \ldots \cdot P(A_n)\), for \(n\) independent events):</p>
 <div align="center">
 $$L = \prod_{i=1}^{n} \Phi(\Delta_i) \quad [1]$$
 </div>
@@ -171,7 +171,7 @@ $$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} 
 <p><br /></p>
 <h3 id="3-beyond-the-stars-a-new-perspective-on-precison">3. Beyond the Stars: a new perspective on Precison</h3>
 <p>Over a decade later, Gauss revisited and refined his ideas from Theoria Motus, solidifying the OLS method in his 1823 work, Theoria Combinationis. The most remarkable shift in this later work was his formal derivation of the “mean error”, \(m\).
-Gauss realized that “[…] taken from \(x = -\infty\) to \(x = +\infty\) (the mean square of \(x\)) seems most appropriate to generally define and quantify the uncertainty of the observations. Thus, given two systems of observations which differ in their likelihoods, we will say that the one for which the integral \(\int xx\varphi(x)dx\) is smaller is the more precise” (Note: He used \(x\) here to denote the error, which we have referred to as \(\Delta\) throughout this article).</p>
+Gauss realized that “[…] taken from \(x = -\infty\) to \(x = +\infty\) (the mean square of \(x\)) seems most appropriate to generally define and quantify the uncertainty of the observations. Thus, given two systems of observations which differ in their likelihoods, we will say that the one for which the integral \(\int xx\varphi(x)dx\) is smaller is the more precise” (Note: He here used \(x\) and \(\varphi(x)\) to denote the error and its probability, which we have referred to as \(\Delta\) and \(\Phi(\Delta)\) throughout this article, respectively).</p>
 
 <p>Additionally, this work allowed him to move beyond his earlier “Axiom of the Mean”. In Theoria Motus, he had assumed the arithmetic mean was the most probable value to justify the distribution; in Theoria Combinationis, he proved it. He demonstrated that the mean is the Best Linear Unbiased Estimator (BLUE). This was a massive leap as he showed that regardless of the underlying distribution of the errors, the mean remains the mathematically superior choice for minimizing variance.</p>
 
@@ -204,7 +204,7 @@ $$v = -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}$$
 $$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
 </div>
 
-<p>The first term of vanishes as, for \(\pm \infty\),  \(\Delta\) becomes a factor of \(e^{-\infty}\). This leaves us with:</p>
+<p>The first term of \(m^2\) vanishes as, for \(\pm \infty\),  \(\Delta\) becomes a factor of \(e^{-\infty}\). This leaves us with:</p>
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
@@ -220,12 +220,12 @@ $$\Phi(\Delta) = \frac{1}{m\sqrt{2\pi}} \cdot e^{- \frac{1}{2m^2}\Delta^2}$$
 
 <p>This formulation was a game-changer, allowing the method to transcend its astronomical roots. A closer look at this mathematical sequence reveals that what Gauss termed the “mean error,” \(m\), is precisely what we recognize today as the Standard Deviation.</p>
 
-<p>This term was famously coined by Karl Pearson in 1893, who, building on the work of Francis Galton, Walter Weldon, and others, extended Gauss’s contributions into the biological sciences. Hence, by expressing the error \(\Delta\) as \((x - \mu)\), where \(\mu\) is the arithmetic mean and \(x\) represents the individual observations, and substituting Pearson’s \(\sigma\) for \(m\), we arrive at the modern Normal Distribution Probability Density Function:</p>
+<p>The term Standard Deviation was famously coined by Karl Pearson in 1893, who, building on the work of Francis Galton, Walter Weldon, and others, extended Gauss’s contributions into the biological sciences. Hence, by expressing the error \(\Delta\) as \((x - \mu)\), where \(\mu\) is the arithmetic mean and \(x\) represents the individual observations, and substituting Pearson’s \(\sigma\) for \(m\), we arrive at the modern Normal Distribution Probability Density Function:</p>
 <div align="center">
 $$g(x) = \frac{1}{\sigma\sqrt{2\pi}} \cdot e^{- \frac{1}{2}\Big(\frac{x - \mu}{\sigma}\Big)^2}$$
 </div>
 
-<p>This is the exact expression used today to model an array of phenomena, from the natural sciences to marketing analytics and modern Machine Learning applications like Gaussian Naive Bayes. What once began as a mathematical device to recover Ceres has become one of the most fundamental tools for understanding and quantifying uncertainty.</p>
+<p>And this is the exact expression used today to model an array of phenomena, from the natural sciences to marketing analytics and modern Machine Learning applications like Gaussian Naive Bayes. What once began as a mathematical device to recover Ceres has become one of the most fundamental tools for understanding and quantifying uncertainty.</p>
 
 <p><br /> <br /></p>
 <h2 id="references">References</h2>
