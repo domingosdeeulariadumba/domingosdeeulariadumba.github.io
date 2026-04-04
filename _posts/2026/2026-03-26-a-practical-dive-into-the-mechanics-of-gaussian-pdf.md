@@ -113,7 +113,7 @@ Switching to polar coordinates, and "[...] by the elegant theorem first discover
 
 <details markdown="1" style="color: #548494">
 <summary style="color: #548494; font-style: italic; font-size: 14px;">* Expand to see the full demonstration</summary>
-Since $$x$$ is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:
+Since $$x$$ is a dummy variable, the key to evaluating this integral is to consider its square (why? Because $$e^{-x^2}$$ has no elementary antiderivative; that is, direct integration is impossible). This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:
 <div align="center">
 $$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$
 $$I^2 = \int\int_{\mathbb{R}} e^{-(x^2 + y^2)} dxdy$$
@@ -200,7 +200,7 @@ $$v = -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}$$
 
 Plugging these in, the mean square error becomes:
 <div align="center">
-$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
+$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
 </div>
 
 The first term of $$m^2$$ vanishes as, for $$\pm \infty$$,  $$\Delta$$ becomes a factor of $$e^{-\infty}$$. This leaves us with:

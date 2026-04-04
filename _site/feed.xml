@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-04T12:56:01+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-04T13:43:23+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks).</p>
 
 <p>But have you ever taken the time to think about how we arrived at that expression?</p>
 
@@ -94,7 +94,7 @@ $$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta$$
 
 <details style="color: #548494">
   <summary style="color: #548494; font-style: italic; font-size: 14px;">* Expand to see the full demonstration</summary>
-  <p>Since \(x\) is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:</p>
+  <p>Since \(x\) is a dummy variable, the key to evaluating this integral is to consider its square (why? Because \(e^{-x^2}\) has no elementary antiderivative; that is, direct integration is impossible). This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:</p>
   <div align="center">
 $$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$
 $$I^2 = \int\int_{\mathbb{R}} e^{-(x^2 + y^2)} dxdy$$
@@ -181,7 +181,7 @@ $$v = -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}$$
 
 <p>Plugging these in, the mean square error becomes:</p>
 <div align="center">
-$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
+$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
 </div>
 
 <p>The first term of \(m^2\) vanishes as, for \(\pm \infty\),  \(\Delta\) becomes a factor of \(e^{-\infty}\). This leaves us with:</p>
