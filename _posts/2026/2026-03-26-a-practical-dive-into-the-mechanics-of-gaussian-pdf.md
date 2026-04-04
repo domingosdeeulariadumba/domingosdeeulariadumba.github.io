@@ -134,7 +134,7 @@ Let us denote $$I_\theta$$ as the integral dependent on $$\theta$$ and $$I_r$$ i
 $$I^2 = I_\theta \cdot I_r$$
 </div>
 
-The result of $$I_\theta$$ is straightforward:
+The result of the angular component, $$I_\theta$$, is straightforward:
 <div align="center">
 $$I^2 = 2\pi \cdot I_r$$
 </div>
