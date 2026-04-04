@@ -100,7 +100,7 @@ $$LL = \sum_{i=1}^{n} \ln [\Phi(\Delta_i)]$$
 $$\frac{d}{dx} LL = 0$$
 </div>
 
-<p>This equation defines the Maximum Likelihood Estimation (MLE). By applying the chain rule, we can simplify this expression:</p>
+<p>This equation defines the Maximum Likelihood Estimation (MLE). By applying the chain rule, we can expand this to:</p>
 <div align="center">
 $$\frac{d}{dx} LL = \frac{d}{d\Phi} LL \cdot \frac{d}{d\Delta} \Phi \cdot \frac{d}{dx} \Delta = 0$$
 $$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d}{d\Delta} \Phi \cdot (-1) = 0$$

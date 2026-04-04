@@ -11,11 +11,9 @@ cover_credit: "benjaminec/Getty Images"
 
 
 
-If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential tasks). 
+If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task).
 
-But have you ever taken the time to think about how we arrived at that expression? 
-
-This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.
+But have you ever taken the time to think about how we arrived at that expression? This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.
 
 
 <br>
@@ -59,7 +57,7 @@ Now, a crucial question arises: which value of $$x$$ maximizes this joint probab
 $$\frac{d}{dx} LL = 0$$
 </div>
 
-This equation defines the Maximum Likelihood Estimation (MLE). By applying the chain rule, we can simplify this expression:
+This equation defines the Maximum Likelihood Estimation (MLE). By applying the chain rule, we can expand this to:
 <div align="center">
 $$\frac{d}{dx} LL = \frac{d}{d\Phi} LL \cdot \frac{d}{d\Delta} \Phi \cdot \frac{d}{dx} \Delta = 0$$
 $$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d}{d\Delta} \Phi \cdot (-1) = 0$$
@@ -235,7 +233,6 @@ And this is the exact expression used today to model an array of phenomena, from
 <a href="https://archive.org/details/theoryofmotionof00gausuoft">Gauss, C. F. (1809). Theoria motus corporum coelestium in sectionibus conicis solem ambientium. (English trans. by C. H. Davis, Theory of the Motion of the Heavenly Bodies Moving in Conic Sections around the Sun, Boston: Little, Brown and Company, 1857). Last access on March 02, 2026.</a>
 
 <a href="https://www.scribd.com/document/535587387/1995-THEORY-OF-THE-COMBINATION-OF-OBSERVATIONS-LEAST-SUBJECT-TO-ERRORS-G-W-Stewart">Gauss, C. F. (1995). Theory of the Combination of Observations Least Subject to Errors: Part One, Part Two, Supplement. (G. W. Stewart, Trans.). Society for Industrial and Applied Mathematics. Last access on March 09, 2026.</a>
-
 
 <a href="https://web.archive.org/web/20071116022100/http://www.astropa.unipa.it/HISTORY/hoskin.html">Hoskin, M. (1993). Bode's Law and the Discovery of Ceres. In J.F. Linsky & S. Serio (Eds.), Physics of Solar and Stellar Coronae: G.S. Vaiana Memorial Symposium (Astrophysics and Space Science Library, vol. 183, pp. 21–33). Kluwer. Last access on March 11, 2026.</a>
 
