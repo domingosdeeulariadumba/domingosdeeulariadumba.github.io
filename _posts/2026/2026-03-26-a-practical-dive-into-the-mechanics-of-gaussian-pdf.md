@@ -142,7 +142,7 @@ $$I^2 = 2\pi \cdot I_r$$
 For $$I_r$$ we use $$u$$-substitution. Let $$u = -r^2 \implies -\frac{1}{2}du = rdr$$, which implies:
 <div align="center">
 $$I^2 = 2\pi \cdot -\frac{1}{2}\int_{0}^{-\infty}e^udu$$
-$$I^2 = -\pi \cdot (e^{-\infty} - 1)$$
+$$I^2 = \pi \cdot -(e^{-\infty} - 1)$$
 $$I^2 = \pi \implies I = \sqrt{\pi}$$
 </div>
 <br>
