@@ -112,7 +112,7 @@ Switching to polar coordinates, and "[...] by the elegant theorem first discover
 </div>
 
 <details markdown="1" style="color: #548494">
-<summary style="color: #548494">* Expand to see the full demonstration</summary>
+<summary style="color: #548494; font-style: italic; font-size: 14px;">* Expand to see the full demonstration</summary>
 Since $$x$$ is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:
 <div align="center">
 $$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$

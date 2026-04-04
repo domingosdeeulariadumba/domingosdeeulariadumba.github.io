@@ -67,7 +67,7 @@
 <p><img src="/assets/blog/2026/03/ceres.jpg" alt="Ceres" />
 Ceres Image Capture (Credit: NASA)</p>
 
-<p>On January 1, 1801, what was then announced as the new planet Ceres (later classified as the first asteroid and now a dwarf planet) was discovered by Giuseppe Piazzi at the Palermo Astronomical Observatory, in Sicily. This discovery occurred right after Piazzi was invited to join the “Celestial Police” (a group of twenty-four elite astronomers tasked with finding a suspected “missing” planet between Mars and Jupiter). While their collective efforts led to several other astronomical breakthroughs, the predicted planet itself remained elusive.</p>
+<p>On January 1, 1801, what was then announced as the new planet Ceres (later classified as the first asteroid and now a dwarf planet) was discovered by Giuseppe Piazzi at the Palermo Astronomical Observatory, in Sicily. This discovery occurred before Piazzi was invited to join the “Celestial Police” (a group of twenty-four elite astronomers tasked with finding a suspected “missing” planet between Mars and Jupiter). While their collective efforts led to several other astronomical breakthroughs, the predicted planet itself remained elusive.</p>
 
 <p>Piazzi initially mistook Ceres for a comet while searching for the 87th star in the catalog of the French astronomer Abbé de Lacaille. He tracked the object twenty-four times before his final sighting on February 11th. By the time his observations were published, in September of that year, Piazzi had become convinced that its slow, uniform movement suggested something far more significant than a mere comet.</p>
 
@@ -151,7 +151,7 @@ $$1 = A \int_{-\infty}^{+\infty} e^{-(h\Delta)^2} d\Delta$$
 </div>
 
 <details style="color: #548494">
-  <summary style="color: #548494">* Expand to see the full demonstration</summary>
+  <summary style="color: #548494; font-style: italic; font-size: 14px;">* Expand to see the full demonstration</summary>
   <p>Since \(x\) is a dummy variable, the key to evaluating this integral is to consider its square. This allows us to treat the product of two independent integrals as a single double integral over the Cartesian plane:</p>
   <div align="center">
 $$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\infty} e^{-y^2} dy \Big)$$
@@ -168,7 +168,7 @@ $$I^2 = \int_{0}^{2\pi}\int_{0}^{\infty} re^{-r^2} dr d\theta$$
 $$I^2 = \Big(\int_{0}^{2\pi}d\theta \Big) \Big(\int_{0}^{\infty} re^{-r^2} dr \Big)$$
 </div>
 
-  <p>Let us denote \(I_\theta\) as the integral dependent on \(\theta\) and \(I_r\) its \(r\) counterpart:</p>
+  <p>Let us denote \(I_\theta\) as the integral dependent on \(\theta\) and \(I_r\) its radial counterpart:</p>
   <div align="center">
 $$I^2 = I_\theta \cdot I_r$$
 </div>
@@ -178,7 +178,7 @@ $$I^2 = I_\theta \cdot I_r$$
 $$I^2 = 2\pi \cdot I_r$$
 </div>
 
-  <p>For \(I_r\) we use \(u\)-substitution. Let \(u = -r^2 \implies -\frac{1}{2}du = rdr\), which results in:</p>
+  <p>For \(I_r\) we use \(u\)-substitution. Let \(u = -r^2 \implies -\frac{1}{2}du = rdr\), which implies:</p>
   <div align="center">
 $$I^2 = 2\pi \cdot -\frac{1}{2}\int_{0}^{-\infty}e^udu$$
 $$I^2 = -\pi \cdot (e^{-\infty} - 1)$$
@@ -199,7 +199,7 @@ $$\Phi(\Delta) = \frac{h}{\sqrt{\pi}} \cdot e^{-hh\Delta\Delta}$$
 
 <p>Substituting this back into our Likelihood Function (Equation [1]), we arrive at the total Likelihood:</p>
 <div align="center">
-$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2} \quad [5]$$ 
+$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
 </div>
 
 <p>This result cemented the Method of Ordinary Least Squares (OLS). It proved mathematically that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors.</p>
@@ -247,7 +247,7 @@ $$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} \cdot e^{-h^2\Delta
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
 $$m^2 = \frac{1}{2h^2}$$
-$$m = \frac{1}{h\sqrt{2}} \quad [76$$
+$$m = \frac{1}{h\sqrt{2}}$$
 </div>
 
 <h4 id="32-from-measure-of-precision-to-standard-deviation">3.2 From Measure of Precision to Standard Deviation</h4>
