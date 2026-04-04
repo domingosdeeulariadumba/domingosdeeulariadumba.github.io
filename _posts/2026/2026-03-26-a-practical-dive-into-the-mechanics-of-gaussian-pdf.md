@@ -129,7 +129,7 @@ Since the integrand does not depend on $$\theta$$, we can separate the integrals
 $$I^2 = \Big(\int_{0}^{2\pi}d\theta \Big) \Big(\int_{0}^{\infty} re^{-r^2} dr \Big)$$
 </div>
 
-Let us denote $$I_\theta$$ as the integral dependent on $$\theta$$ and $$I_r$$ its $$r$$ counterpart:
+Let us denote $$I_\theta$$ as the integral dependent on $$\theta$$ and $$I_r$$ its radial counterpart:
 <div align="center">
 $$I^2 = I_\theta \cdot I_r$$
 </div>
@@ -139,7 +139,7 @@ The result of $$I_\theta$$ is straightforward:
 $$I^2 = 2\pi \cdot I_r$$
 </div>
 
-For $$I_r$$ we use $$u$$-substitution. Let $$u = -r^2 \implies -\frac{1}{2}du = rdr$$, which results in:
+For $$I_r$$ we use $$u$$-substitution. Let $$u = -r^2 \implies -\frac{1}{2}du = rdr$$, which implies:
 <div align="center">
 $$I^2 = 2\pi \cdot -\frac{1}{2}\int_{0}^{-\infty}e^udu$$
 $$I^2 = -\pi \cdot (e^{-\infty} - 1)$$
