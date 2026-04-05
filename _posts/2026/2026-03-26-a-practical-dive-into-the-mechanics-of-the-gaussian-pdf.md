@@ -117,7 +117,39 @@ $$I^2 = \Big(\int_{-\infty}^{+\infty} e^{-x^2} dx \Big) \Big(\int_{-\infty}^{+\i
 $$I^2 = \int\int_{\mathbb{R}} e^{-(x^2 + y^2)} dxdy$$
 </div>
 
-To solve this, we transform the integral into polar coordinates, where $$x^2 + y^2 = r^2$$ and the differential area element $$dx dy$$ becomes $$r dr d\theta$$. The limits of integration then change from the entire $$xy$$-plane to $$r \in [0, \infty)$$ and $$\theta \in [0, 2\pi)$$:
+To solve this, we transform the integral into polar coordinates, where $$x^2 + y^2 = r^2$$, where $$x = rcos(\theta)$$ and $$y = rsin(\theta)$$. Additionally, we have that in Cartesian coordinates the differential area element, $$dA = dx dy$$, becomes $$det(J) dr d\theta$$. The (distortion) factor $$det(J)$$ accounts for the change from Cartesian to polar coordinates from the substitution rule of multiple integrals (which states that, when using other coordinates, the Jacobian determinant of the coordinate conversion formula has to be considered).
+
+The Jacobian matrix of a vector-valued function $$f:\mathbb{R^n} \implies \mathbb{R^m} $$ is the $$m \times n$$ matrix of all first-order partial derivatives:
+<div align="center">
+$$J = \frac{\partial \mathbf{f}}{\partial \mathbf{x}} = 
+\begin{pmatrix} 
+\dfrac{\partial f_1}{\partial x_1}  & \cdots & \dfrac{\partial f_1}{\partial x_n} \\
+\vdots & \ddots & \vdots \\
+\dfrac{\partial f_m}{\partial x_1}  & \cdots & \dfrac{\partial f_m}{\partial x_n}
+\end{pmatrix}$$
+</div>
+
+As we have seen, the polar coordinate map is $$\mathbf{f}(r, \theta) = (x \quad y) = (rcos\theta \quad rsin\theta)$$. For our concrete case, the Jacobian is:
+<div align="center">
+$$J = \frac{\partial  (x, y)}{\partial (r, \theta)} = 
+\begin{pmatrix} 
+\dfrac{\partial x}{\partial r}  & \dfrac{\partial x}{\partial \theta} \\
+\dfrac{\partial y}{\partial r}  & \dfrac{\partial y}{\partial \theta}
+\end{pmatrix} 
+= 
+\begin{pmatrix} 
+\cos\theta  & -rsin\theta \\[6pt]
+\sin\theta  & rcos\theta
+\end{pmatrix}$$
+</div>
+
+Hence, the determinant is:
+<div align="center">
+$$det(J) = cos\theta \cdot r\cos\theta - (-r\sin\theta) \cdot \sin\theta$$
+$$det(J) = r(cos^2\theta + sin^2\theta) = r$$
+</div>
+
+That is how the differential area $$dA = dx dy$$ becomes  $$dA = rdr d\theta$$. With this arrangement, the limits of integration then change from the entire $$xy$$-plane to $$r \in [0, \infty)$$ and $$\theta \in [0, 2\pi)$$:
 <div align="center">
 $$I^2 = \int_{0}^{2\pi}\int_{0}^{\infty} re^{-r^2} dr d\theta$$
 </div>
@@ -144,6 +176,8 @@ $$I^2 = \pi \cdot -(e^{-\infty} - 1)$$
 $$I^2 = \pi \implies I = \sqrt{\pi}$$
 </div>
 <br>
+It is worth noting though that the double integral trick and the polar coordinates conversion approach was proposed later by Poisson, as Laplace's starting point was Euler's integral.
+<br><br>
 </details>
 
 Therefore, this results in:
@@ -235,6 +269,8 @@ And this is the exact expression used today to model an array of phenomena, from
 <a href="https://www.scribd.com/document/535587387/1995-THEORY-OF-THE-COMBINATION-OF-OBSERVATIONS-LEAST-SUBJECT-TO-ERRORS-G-W-Stewart">Gauss, C. F. (1995). Theory of the Combination of Observations Least Subject to Errors: Part One, Part Two, Supplement. (G. W. Stewart, Trans.). Society for Industrial and Applied Mathematics. Last access on March 09, 2026.</a>
 
 <a href="https://web.archive.org/web/20071116022100/http://www.astropa.unipa.it/HISTORY/hoskin.html">Hoskin, M. (1993). Bode's Law and the Discovery of Ceres. In J.F. Linsky & S. Serio (Eds.), Physics of Solar and Stellar Coronae: G.S. Vaiana Memorial Symposium (Astrophysics and Space Science Library, vol. 183, pp. 21–33). Kluwer. Last access on March 11, 2026.</a>
+
+<a href="https://www.york.ac.uk/depts/maths/histstat/normal_history.pdf">Lee, P. M. (n.d.). The probability integral. Department of Mathematics, University of York. Last access on April 05, 2026.</a>
 
 <a href="https://www.jpl.nasa.gov/news/ceres-keeping-well-guarded-secrets-for-215-years">NASA Jet Propulsion Laboratory. (2016). Ceres: Keeping Well-Guarded Secrets for 215 Years. Last access on February 28, 2026</a>
 
