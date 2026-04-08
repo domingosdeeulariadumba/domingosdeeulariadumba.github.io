@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-08T06:47:02+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task).</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-08T21:20:57+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task).</p>
 
 <p>But have you ever taken the time to think about how we arrived at that expression? This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.</p>
 
@@ -32,7 +32,7 @@ $$L = \prod_{i=1}^{n} \Phi(\Delta_i) \quad [1]$$
 
 <p>Since it is mathematically simpler to work with sums than products, we transform the Likelihood Function into a Log-Likelihood Function:</p>
 <div align="center">
-$$LL = \sum_{i=1}^{n} \ln [\Phi(\Delta_i)]$$
+$$LL = \sum_{i=1}^{n} \ln\Phi(\Delta_i)$$
 </div>
 
 <p>Now, a crucial question arises: which value of \(x\) maximizes this joint probability to give us the most accurate estimation of Ceres’ position? In calculus, this is solved by finding where the derivative equals zero:</p>
@@ -42,9 +42,9 @@ $$\frac{d}{dx} LL = 0$$
 
 <p>This equation defines the Maximum Likelihood Estimation (MLE). By applying the chain rule, we can expand this to:</p>
 <div align="center">
-$$\frac{d}{dx} LL = \frac{d}{d\Phi} LL \cdot \frac{d}{d\Delta} \Phi \cdot \frac{d}{dx} \Delta = 0$$
-$$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d}{d\Delta} \Phi \cdot (-1) = 0$$
-$$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d}{d\Delta} \Phi = 0 \quad [2]$$
+$$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{d}{d\Phi} (\ln\Phi(\Delta_i)) \cdot \frac{d \Phi}{d\Delta_i} \cdot \frac{d \Delta_i}{dx} = 0$$
+$$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d \Phi}{d\Delta_i} \cdot (-1) = 0$$
+$$\frac{d}{dx} LL = \sum_{i=1}^{n} \frac{1}{\Phi(\Delta_i)} \cdot \frac{d \Phi}{d\Delta_i} = 0 \quad [2]$$
 </div>
 
 <h5 id="b-the-axiom-of-the-mean">b) The Axiom of the Mean</h5>
@@ -63,18 +63,18 @@ $$\sum_{i=1}^{n} \Delta_i = 0 \quad [3]$$
 <h4 id="21-solving-the-functional-equation">2.1 Solving the Functional Equation</h4>
 <p>Gauss then compares equations [2] and [3]. In this comparison, he asserts that for both conditions to hold simultaneously for any set of observations, the ratio of the two terms must be a “constant quantity” — that is \(f(\Delta) \propto \Delta\) —, which we will call \(k\):</p>
 <div align="center">
-$$\frac{1}{\Phi(\Delta)} \cdot \frac{d}{d\Delta} \Phi \cdot \frac{1}{\Delta} = k$$
+$$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} \cdot \frac{1}{\Delta} = k$$
 </div>
 
 <p>Which results in:</p>
 <div align="center">
-$$\frac{1}{\Phi(\Delta)} \cdot \frac{d}{d\Delta} \Phi = k \Delta$$
-$$\frac{d}{\Phi(\Delta)} \Phi = k \Delta {d\Delta}$$
+$$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} = k \Delta$$
+$$\frac{d \Phi}{\Phi(\Delta)} = k \Delta {d\Delta}$$
 </div>
 
 <p>By separating the variables and integrating both sides:</p>
 <div align="center">
-$$\int\frac{d}{\Phi(\Delta)} \Phi = k\int\Delta {d\Delta}$$
+$$\int\frac{d \Phi}{\Phi(\Delta)} = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
 $$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
 $$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
