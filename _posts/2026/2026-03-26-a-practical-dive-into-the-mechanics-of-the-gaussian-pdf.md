@@ -80,7 +80,7 @@ $$\sum_{i=1}^{n} \Delta_i = 0 \quad [3]$$
 
 
 #### 2.1 Solving the Functional Equation
-Gauss then compares equations [2] and [3]. For both conditions  to hold simultaneously for any set of observations, the ratio of the two terms must be a "constant quantity" — that is $$f(\Delta) \propto \Delta$$ —, which we will call $$k$$:
+Gauss then compares equations [2] and [3]. In this comparison, he asserts that for both conditions to hold simultaneously for any set of observations, the ratio of the two terms must be a "constant quantity" — that is $$f(\Delta) \propto \Delta$$ —, which we will call $$k$$:
 <div align="center">
 $$\frac{1}{\Phi(\Delta)} \cdot \frac{d}{d\Delta} \Phi \cdot \frac{1}{\Delta} = k$$
 </div>
