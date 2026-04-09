@@ -80,7 +80,7 @@ $$\sum_{i=1}^{n} \Delta_i = 0 \quad [3]$$
 
 
 #### 2.1 Solving the Functional Equation
-Gauss then compares equations [2] and [3]. In this comparison, he asserts that for both conditions to hold simultaneously for any set of observations, the ratio of the two terms must be a "constant quantity" — that is $$f(\Delta) \propto \Delta$$ —, which we will call $$k$$:
+Gauss then compares equations [2] and [3]. In this comparison, he asserts that for both conditions to hold simultaneously for any set of observations, the ratio of the two terms must be a "constant quantity", which we will call $$k$$:
 <div align="center">
 $$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} \cdot \frac{1}{\Delta} = k$$
 </div>
@@ -195,7 +195,7 @@ Substituting this back into our Likelihood Function (Equation [1]), we arrive at
 $$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
 </div>
 
-This result cemented the Method of Ordinary Least Squares (OLS). It proved mathematically that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors.
+This result proved that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors — the mathematical core of what we now call Ordinary Least Squares (OLS).
 
 The presented framework was robust enough to recover Ceres from the void. However, its true potential was only beginning to be realized; the Gaussian PDF would soon move from the stars to nearly every field of human inquiry.
 
