@@ -83,16 +83,12 @@ $$\sum_{i=1}^{n} \Delta_i = 0 \quad [3]$$
 Gauss then compares equations [2] and [3]. In this comparison, he asserts that for both conditions to hold simultaneously for any set of observations, the ratio of the two terms must be a "constant quantity", which we will call $$k$$:
 <div align="center">
 $$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} \cdot \frac{1}{\Delta} = k$$
-</div>
-
-Which results in:
-<div align="center">
 $$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} = k \Delta$$
-$$\frac{d \Phi}{\Phi(\Delta)} = k \Delta {d\Delta}$$
 </div>
 
 By separating the variables and integrating both sides:
 <div align="center">
+$$\frac{d \Phi}{\Phi(\Delta)} = k \Delta {d\Delta}$$
 $$\int\frac{d \Phi}{\Phi(\Delta)} = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
 $$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
