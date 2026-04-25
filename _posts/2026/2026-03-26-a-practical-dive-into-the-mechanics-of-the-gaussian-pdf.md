@@ -2,7 +2,7 @@
 layout: post
 title: "A Practical Dive Into the Mechanics of the Gaussian PDF"
 date: 2026-03-26
-last_update: 2026-04-03
+last_update: 2026-04-2
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/03/cover.png"
@@ -231,7 +231,19 @@ Plugging these in, the mean square error becomes:
 $$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
 </div>
 
-The first term of $$m^2$$ vanishes as, for $$\pm \infty$$,  $$\Delta$$ becomes a factor of $$e^{-\infty}$$. This leaves us with:
+The first term of $$m^2$$ (which we will denote as $$t$$) vanishes. At $$\Delta \to \pm\infty$$,
+it takes the indeterminate form $$\infty \cdot 0$$. Rewriting as a ratio:
+<div align="center">
+$$t = -\frac{1}{2h^2} \cdot \frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
+</div>
+
+This becomes $$\frac{\infty}{\infty}$$, so L'Hôpital's rule applies. Differentiating numerator
+and denominator with respect to $$\Delta$$:
+<div align="center">
+$$t = -\frac{1}{4h^4} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
+</div>
+Since both $$|\Delta|$$ and $$e^{h^2\Delta^2}$$ diverge, the denominator grows without bound
+in both limits, giving $$t = 0$$. This leaves us with:
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
