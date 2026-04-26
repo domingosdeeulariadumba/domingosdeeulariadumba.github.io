@@ -11,7 +11,7 @@ cover_credit: "benjaminec/Getty Images"
 
 
 
-If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task).But have you ever taken the time to think about how we arrived at that expression?
+If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task). But have you ever taken the time to think about how we arrived at that expression?
 
 
 This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.
