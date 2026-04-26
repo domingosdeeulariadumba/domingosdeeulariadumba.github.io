@@ -2,7 +2,7 @@
 layout: post
 title: "A Practical Dive Into the Mechanics of the Gaussian PDF"
 date: 2026-03-26
-last_update: 2026-04-2
+last_update: 2026-04-26
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/03/cover.png"
