@@ -216,11 +216,11 @@ Substituting $$\Phi(\Delta)$$ from our previously derived function, we obtain:
 $$m^2 = \frac{h}{\sqrt{\pi}}\int_{-\infty}^{+\infty}\Delta^2 e^{-h^2\Delta^2} d\Delta$$
 </div>
 
-We solve this using integration by parts ($$\int udv = uv - \int vdu$$). Let:
+We solve this using Integration by Parts (IBP), where $$\int udv = uv - \int vdu$$. Let:
 * $$u = \Delta \implies du = d\Delta$$.
 * $$dv = \Delta e^{-h^2\Delta^2}d\Delta \implies v = \int\Delta e^{-h^2\Delta^2}d\Delta$$. 
 
-Before moving to the integration by parts, let us first find the solution for $$v$$ by setting  $$w = -h^2\Delta^2$$, which implies:
+Before moving to the IBP, let us first find the solution for $$v$$ by setting  $$w = -h^2\Delta^2$$, which implies:
 <div align="center">
 $$dw = -2h^2\Delta d\Delta \implies -\frac{1}{2h^2}dw = \Delta d\Delta$$
 $$v = -\frac{1}{2h^2} \int e^wdw$$
@@ -232,20 +232,21 @@ Plugging these in, the mean square error becomes:
 $$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
 </div>
 
-The first term of $$m^2$$ (which we will denote as $$t$$) vanishes. At $$\Delta \to \pm\infty$$,
+The $$uv$$ term in $$m^2$$ resulting from IBP vanishes. At $$\Delta \to \pm\infty$$,
 it takes the indeterminate form $$\infty \cdot 0$$. Rewriting as a ratio:
 <div align="center">
-$$t = -\frac{1}{2h^2} \cdot \frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
+$$uv = -\frac{1}{2h^2} \cdot \frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
 </div>
 
-This becomes $$\frac{\infty}{\infty}$$, so L'Hôpital's rule applies. Differentiating numerator
+This now becomes $$\frac{\infty}{\infty}$$, so L'Hôpital's rule applies. Differentiating numerator
 and denominator with respect to $$\Delta$$:
 <div align="center">
-$$t = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{2h^2\Delta\, e^{h^2\Delta^2}}$$
-$$t = -\frac{1}{4h^4} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
+$$uv = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{2h^2\Delta\, e^{h^2\Delta^2}}$$
+$$uv = -\frac{1}{4h^4} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
 </div>
+
 Since both $$|\Delta|$$ and $$e^{h^2\Delta^2}$$ diverge, the denominator grows without bound
-in both limits, giving $$t = 0$$. This leaves us with:
+in both limits, giving $$uv = 0$$. This leaves us with:
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
@@ -256,7 +257,7 @@ $$m^2 = \frac{1}{2h^2} \implies m = \frac{1}{h\sqrt{2}}$$
 #### 3.2 From Measure of Precision to Standard Deviation
 We can now rewrite our error function in Equation [4] in terms of $$m$$:
 <div align="center">
-$$\Phi(\Delta) = \frac{1}{m\sqrt{2\pi}} \cdot e^{- \frac{1}{2m^2}\Delta^2}$$
+$$\Phi(\Delta) = \frac{1}{m\sqrt{2\pi}} \cdot e^{-\frac{1}{2m^2}\Delta^2}$$
 </div>
 
 This formulation was a game-changer, allowing the method to transcend its astronomical roots. A closer look at this mathematical sequence reveals that what Gauss termed the "mean error," $$m$$, is precisely what we recognize today as the Standard Deviation.
