@@ -4,10 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A Practical Dive Into the Mechanics of the Gaussian PDF • Domingos de Eulária Dumba</title>
-    <meta name="description" content="If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
+    <meta name="description" content="If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
     <meta property="og:type" content="article" />
     <meta property="og:title" content="A Practical Dive Into the Mechanics of the Gaussian PDF" />
-    <meta property="og:description" content="If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
+    <meta property="og:description" content="If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any bro..." />
     <meta property="og:image" content="./assets/images/avatar.png" />
     <meta property="og:url" content="https://domingosdeeulariadumba.github.io/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html" />
     <meta property="og:site_name" content="Domingos de Eulária Dumba" />
@@ -50,15 +50,15 @@
             <h1 id="title">A Practical Dive Into the Mechanics of the Gaussian PDF</h1>
             <p id="date">
                 Published on Mar 26, 2026
-                <span class="last-update"> • Updated on Apr 02, 2026</span>
+                <span class="last-update"> • Updated on Apr 26, 2026</span>
             </p>
             <p id="cover">
             <img src="/../assets/blog/2026/03/cover.png" alt="cover"/>    
             Credit: benjaminec/Getty Images
             </p>            
-            <p>If you have invested considerable time in Statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task).</p>
+            <p>If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task). But have you ever taken the time to think about how we arrived at that expression?</p>
 
-<p>But have you ever taken the time to think about how we arrived at that expression? This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.</p>
+<p>This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.</p>
 
 <p><br /></p>
 <h3 id="1-the-discovery-of-ceres">1. The Discovery of Ceres</h3>
@@ -287,8 +287,7 @@ in both limits, giving \(t = 0\). This leaves us with:</p>
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
-$$m^2 = \frac{1}{2h^2}$$
-$$m = \frac{1}{h\sqrt{2}}$$
+$$m^2 = \frac{1}{2h^2} \implies m = \frac{1}{h\sqrt{2}}$$
 </div>
 
 <h4 id="32-from-measure-of-precision-to-standard-deviation">3.2 From Measure of Precision to Standard Deviation</h4>
