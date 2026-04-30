@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-30T06:04:03+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task). But have you ever taken the time to think about how we arrived at that expression?</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-04-30T22:13:01+01:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Domingos de Eulária Dumba</title><subtitle>Data Scientist &amp; ML Engineer</subtitle><entry><title type="html">A Practical Dive Into the Mechanics of the Gaussian PDF</title><link href="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html" rel="alternate" type="text/html" title="A Practical Dive Into the Mechanics of the Gaussian PDF" /><published>2026-03-26T00:00:00+01:00</published><updated>2026-03-26T00:00:00+01:00</updated><id>http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf</id><content type="html" xml:base="http://localhost:4000/general/2026/03/26/a-practical-dive-into-the-mechanics-of-the-gaussian-pdf.html"><![CDATA[<p>If you have invested considerable time in statistics, you have inevitably relied on Gaussian Probability Density Function (whether for A/B testing or any broader inferential task). But have you ever taken the time to think about how we arrived at that expression?</p>
 
 <p>This article walks through the mathematical foundation of the Normal PDF, starting with the events that not only ignited it but its evolution in modern application of statistics.</p>
 
@@ -72,8 +72,8 @@ $$\frac{1}{\Phi(\Delta)} \cdot \frac{d \Phi}{d\Delta} = k \Delta$$
 $$\frac{d \Phi}{\Phi(\Delta)} = k \Delta {d\Delta}$$
 $$\int\frac{d \Phi}{\Phi(\Delta)} = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
-$$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
-$$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
+$$\Phi(\Delta) = \exp\Bigg(\frac{k}{2} \Delta^2 + c\Bigg)$$
+$$\Phi(\Delta) = \exp(c) \cdot \exp\Bigg(\frac{k}{2} \Delta^2\Bigg) \quad [4]$$
 </div>
 
 <p>Recall that \(\Phi(\Delta)\) represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let \(\exp(c) = A\) and \(\frac{1}{2} k = -h^2\), where \(h\) is what Gauss termed the “measure of precision” (here, the constant \(k\) is set to negative since the likelihood of the observations, \(\Phi(\Delta)\), must decay for large errors). And given that the total probability must sum to 1, we solve for \(A\):</p>
@@ -169,7 +169,7 @@ $$\Phi(\Delta) = \frac{h}{\sqrt{\pi}} \cdot e^{-hh\Delta\Delta}$$
 
 <p>Substituting this back into our Likelihood Function (Equation [1]), we arrive at the total Likelihood:</p>
 <div align="center">
-$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
+$$L = \Bigg(\frac{h}{\sqrt{\pi}}\Bigg)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
 </div>
 
 <p>This result proved that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors — the mathematical core of what we now call Ordinary Least Squares (OLS).</p>
@@ -209,24 +209,24 @@ $$v = -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}$$
 
 <p>Plugging these in, the mean square error becomes:</p>
 <div align="center">
-$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
+$$m^2 = \frac{h}{\sqrt\pi} \Bigg(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Bigg|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Bigg)$$
+$$m^2 = \frac{1}{2h\sqrt\pi} \Bigg(-\Delta e^{-h^2\Delta^2}\Bigg|_{-\infty}^{+\infty} + \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta \Bigg)$$
 </div>
 
-<p>The \(uv\) term in \(m^2\) resulting from IBP vanishes. At \(\Delta \to \pm\infty\),
+<p>The first term in \(m^2\), which we now denote as \(t,\) vanishes. At \(\Delta \to \pm\infty\),
 it takes the indeterminate form \(\infty \cdot 0\). Rewriting as a ratio:</p>
 <div align="center">
-$$uv = -\frac{1}{2h^2} \cdot \frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
+$$t = -\frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
 </div>
 
 <p>This now becomes \(\frac{\infty}{\infty}\), so L’Hôpital’s rule applies. Differentiating numerator
 and denominator with respect to \(\Delta\):</p>
 <div align="center">
-$$uv = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{2h^2\Delta\, e^{h^2\Delta^2}}$$
-$$uv = -\frac{1}{4h^4} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
+$$t = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
 </div>
 
 <p>Since both \(|\Delta|\) and \(e^{h^2\Delta^2}\) diverge, the denominator grows without bound
-in both limits, giving \(uv = 0\). This leaves us with:</p>
+in both limits, giving \(t = 0\). This leaves us with:</p>
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$

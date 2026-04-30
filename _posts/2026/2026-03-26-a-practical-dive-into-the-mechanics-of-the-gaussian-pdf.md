@@ -2,7 +2,7 @@
 layout: post
 title: "A Practical Dive Into the Mechanics of the Gaussian PDF"
 date: 2026-03-26
-last_update: 2026-04-26
+last_update: 2026-04-30
 author: "Domingos de Eulária Dumba"
 categories: general
 cover: "2026/03/cover.png"
@@ -92,8 +92,8 @@ By separating the variables and integrating both sides:
 $$\frac{d \Phi}{\Phi(\Delta)} = k \Delta {d\Delta}$$
 $$\int\frac{d \Phi}{\Phi(\Delta)} = k\int\Delta {d\Delta}$$
 $$\ln\Phi(\Delta) = \frac{k}{2} \Delta^2 + c$$
-$$\Phi(\Delta) = \exp\Big(\frac{k}{2} \Delta^2 + c\Big)$$
-$$\Phi(\Delta) = \exp(c) \cdot \exp\Big(\frac{k}{2} \Delta^2\Big) \quad [4]$$
+$$\Phi(\Delta) = \exp\Bigg(\frac{k}{2} \Delta^2 + c\Bigg)$$
+$$\Phi(\Delta) = \exp(c) \cdot \exp\Bigg(\frac{k}{2} \Delta^2\Bigg) \quad [4]$$
 </div>
 
 Recall that $$\Phi(\Delta)$$ represents the likelihood of an individual measurement. Thus, from [4] we can infer that the maximum probability is such that the squared errors are minimized. Let $$\exp(c) = A$$ and $$\frac{1}{2} k = -h^2$$, where $$h$$ is what Gauss termed the "measure of precision" (here, the constant $$k$$ is set to negative since the likelihood of the observations, $$\Phi(\Delta)$$, must decay for large errors). And given that the total probability must sum to 1, we solve for $$A$$:
@@ -189,7 +189,7 @@ $$\Phi(\Delta) = \frac{h}{\sqrt{\pi}} \cdot e^{-hh\Delta\Delta}$$
 
 Substituting this back into our Likelihood Function (Equation [1]), we arrive at the total Likelihood:
 <div align="center">
-$$L = \Big(\frac{h}{\sqrt{\pi}}\Big)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
+$$L = \Bigg(\frac{h}{\sqrt{\pi}}\Bigg)^n \cdot e^{-h^2 \sum_{i=1}^{n} \Delta_i^2}$$ 
 </div>
 
 This result proved that maximizing the likelihood of the observations is equivalent to minimizing the sum of squared errors — the mathematical core of what we now call Ordinary Least Squares (OLS).
@@ -229,24 +229,24 @@ $$v = -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2}$$
 
 Plugging these in, the mean square error becomes:
 <div align="center">
-$$m^2 = \frac{h}{\sqrt\pi} \Big(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Big|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Big)$$
+$$m^2 = \frac{h}{\sqrt\pi} \Bigg(\Delta \cdot -\frac{1}{2h^2} e^{-h^2\Delta^2}\Bigg|_{-\infty}^{+\infty} - \int_{-\infty}^{+\infty} -\frac{1}{2h^2} \cdot e^{-h^2\Delta^2} d\Delta \Bigg)$$
+$$m^2 = \frac{1}{2h\sqrt\pi} \Bigg(-\Delta e^{-h^2\Delta^2}\Bigg|_{-\infty}^{+\infty} + \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta \Bigg)$$
 </div>
 
-The $$uv$$ term in $$m^2$$ resulting from IBP vanishes. At $$\Delta \to \pm\infty$$,
+The first term in $$m^2$$, which we now denote as $$t,$$ vanishes. At $$\Delta \to \pm\infty$$,
 it takes the indeterminate form $$\infty \cdot 0$$. Rewriting as a ratio:
 <div align="center">
-$$uv = -\frac{1}{2h^2} \cdot \frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
+$$t = -\frac{\Delta}{e^{h^2\Delta^2}}\Bigg|_{-\infty}^{+\infty}$$
 </div>
 
 This now becomes $$\frac{\infty}{\infty}$$, so L'Hôpital's rule applies. Differentiating numerator
 and denominator with respect to $$\Delta$$:
 <div align="center">
-$$uv = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{2h^2\Delta\, e^{h^2\Delta^2}}$$
-$$uv = -\frac{1}{4h^4} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
+$$t = -\frac{1}{2h^2} \cdot \lim_{\Delta \to \pm\infty} \frac{1}{\Delta\, e^{h^2\Delta^2}}$$
 </div>
 
 Since both $$|\Delta|$$ and $$e^{h^2\Delta^2}$$ diverge, the denominator grows without bound
-in both limits, giving $$uv = 0$$. This leaves us with:
+in both limits, giving $$t = 0$$. This leaves us with:
 <div align="center">
 $$m^2 = \frac{1}{2h\sqrt\pi} \int_{-\infty}^{+\infty} e^{-h^2\Delta^2} d\Delta$$
 $$m^2 = \frac{1}{2h\sqrt\pi} \cdot \frac{\sqrt \pi}{h}$$
