@@ -1,6 +1,7 @@
 # Domingos de Eulária Dumba — Personal Website
 
-Welcome to my web page: [www.domingosdeeulariadumba.com](https://www.domingosdeeulariadumba.com)
+Visit the web page [here](https:/domingosdeeulariadumba.github.io)
+)
 
 Here you can:
 - Explore some of my projects
