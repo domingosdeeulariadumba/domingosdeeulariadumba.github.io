@@ -1,6 +1,6 @@
 # Domingos de Eulária Dumba — Personal Website
 
-Visit the web page [here](https:/domingosdeeulariadumba.github.io)
+Visit the web page [here](https://domingosdeeulariadumba.github.io)
 
 Here you can:
 - Explore some of my projects
